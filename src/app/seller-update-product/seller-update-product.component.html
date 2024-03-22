@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Cập nhật sản phẩm </h2>
+  <p class="p">{{ updateMessage }}</p>
+    <div class="container">
+      <form #addProductForm="ngForm" (ngSubmit)="submit(addProductForm.value)">
+        <div class="row">
+          <div class="col mb-3">
+            <label for="name" class="form-label">Tên Sản Phẩm:</label>
+            <input type="text" class="form-control" id="name" name="name" ngModel="{{ productData?.name }}" placeholder="Nhập tên sản phẩm">
+          </div>
+          <div class="col mb-3">
+            <label for="price" class="form-label">Giá:</label>
+            <input type="text" class="form-control" id="price" name="price" ngModel="{{ productData?.price }}" placeholder="Nhập giá sản phẩm">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <label for="category" class="form-label">Danh mục:</label>
+            <input type="text" class="form-control" id="category" name="category" ngModel="{{ productData?.category }}" placeholder="Nhập danh mục sản phẩm">
+          </div>
+          <div class="col mb-3">
+            <label for="color" class="form-label">Màu sắc:</label>
+            <input type="text" class="form-control" id="color" name="color" ngModel="{{ productData?.color }}" placeholder="Nhập màu sắc sản phẩm">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Mô tả:</label>
+          <textarea class="form-control" id="description" name="description" rows="5" ngModel="{{ productData?.description }}" placeholder="Nhập mô tả sản phẩm"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Đường dẫn hình ảnh:</label>
+          <input type="text" class="form-control" id="image" name="image" ngModel="{{ productData?.image }}" placeholder="Nhập đường dẫn hình ảnh URL">
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu Lại</button>
+      </form>
+    </div>
+
+</div>

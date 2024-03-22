@@ -1,0 +1,41 @@
+<div *ngIf="popularProducts">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let item of popularProducts; let i = index" [class.active]="i === 0">
+        <img class="d-block carousel-image" [src]="item.image" alt="Slide {{i}}">
+        <div class="carousel-caption">
+          <h5>{{ item.name }}</h5>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+<div class="container">
+  <h2>Danh sách sản phẩm</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of trendyProducts">
+      <div class="card">
+        <img [src]="product.image" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p>Màu sắc: {{ product.color }}</p>
+          <p>Danh mục: {{ product.category }}</p>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text text-danger">Giá: {{ product.price | currency:'USD' :'symbol':'1.0-0'}}</p>
+          <a routerLink="detail/{{ product.id }}" class="btn btn-primary">Xem chi tiết</a>
+          <a href="#" class="btn btn-success ms-2">Thêm giỏ hàng</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

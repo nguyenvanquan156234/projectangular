@@ -1,0 +1,47 @@
+<!-- detail.component.html -->
+<div class="container" *ngIf="productData">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="productData.image" alt="Product Image" class="img-fluid" />
+    </div>
+    <div class="col-md-6 mt-5">
+      <h2>{{ productData.name }}</h2>
+      <h5>Màu sắc:</h5>
+      <p [style.backgroundColor]="productData.color" class="product-color"></p>
+      <p>Danh mục: {{ productData.category }}</p>
+      <p>{{ productData.description }}</p>
+      <h4 class="text-danger">
+        Giá: {{ productData.price | currency : "USD" : "symbol" : "1.0-0" }}
+      </h4>
+      <button class="btn btn-primary">Mua ngay</button>
+     
+      <button  class="btn btn-success" (click)="addToCart()">
+        Thêm vào giỏ hàng
+      </button>
+      <div class="quantity mt-3">
+        <label class="mr-3">Số lượng:</label>
+        <div class="input-group">
+          <button
+            (click)="handleQuantity('min')"
+            class="btn btn-outline-secondary quantity-btn"
+            type="button"
+          >
+            -
+          </button>
+          <input
+            type="text"
+            class="form-control text-center quantity-input"
+            value="{{ productQuantity }}"
+          />
+          <button
+            (click)="handleQuantity('plus')"
+            class="btn btn-outline-secondary quantity-btn"
+            type="button"
+          >
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

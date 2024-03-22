@@ -1,0 +1,22 @@
+/* detail.component.css */
+.quantity {
+  font-size: 14px;
+}
+
+.quantity .input-group {
+  width: 150px; /* Điều chỉnh kích thước phần số lượng */
+}
+
+.quantity-btn {
+  width: 30px; /* Điều chỉnh kích thước của nút - và + */
+}
+
+.quantity-input {
+  width: 60px; /* Điều chỉnh kích thước của input số lượng */
+}
+.product-color{
+  border: 3px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

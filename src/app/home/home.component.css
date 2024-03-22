@@ -1,0 +1,34 @@
+.carousel-inner {
+  max-height: 400px; /* Điều chỉnh chiều cao tối đa của carousel */
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền của caption */
+  color: white; /* Màu chữ của caption */
+  position: absolute; /* Vị trí tuyệt đối */
+  bottom: 0; /* Đặt caption ở dưới cùng */
+  left: 0; /* Đặt caption ở bên trái */
+  right: 0; /* Đặt caption ở bên phải */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  margin: 0; /* Xóa margin của tiêu đề và đoạn văn */
+  padding: 10px; /* Padding của tiêu đề và đoạn văn */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền của nút chuyển */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: white; /* Màu biểu tượng chuyển */
+}
+.carousel-image{
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

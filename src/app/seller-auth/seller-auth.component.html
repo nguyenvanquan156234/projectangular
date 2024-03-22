@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <div *ngIf="!showLogin" class="row justify-content-center">
+    <div class="col-lg-6" >
+      <h2 class="text-center mb-4">Người bán đăng ký</h2>
+      <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)">
+        <div class="mb-3">
+          <label for="inputName" class="form-label">Tên</label>
+          <input type="text" class="form-control" id="inputName" name="name" placeholder="Nhập tên của bạn" ngModel required>
+        </div>
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Nhập email của bạn" ngModel required>
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Mật khẩu</label>
+          <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Nhập mật khẩu" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng ký</button>
+        <a class="btn btn-secondary" (click)="openLogin()">bạn có tài khoản? click để đăng nhập</a>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="showLogin"  class="row justify-content-center">
+    <div class="col-lg-6">
+      <h2 class="text-center mb-4"> Người bán Đăng nhập</h2>
+      <p class=" alert-danger mt-3 text-danger">{{ authError }}</p>
+      <form #sellerSignUp="ngForm" (ngSubmit)="login(sellerSignUp.value)">
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Nhập email của bạn" ngModel required>
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Mật khẩu</label>
+          <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Nhập mật khẩu" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+
+      </form>
+    </div>
+  </div>
+</div>

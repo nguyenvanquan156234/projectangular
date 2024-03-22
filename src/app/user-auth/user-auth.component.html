@@ -1,0 +1,42 @@
+<div class="row justify-content-center" *ngIf="showLogin">
+  <div class="col-lg-6">
+    <h2 class="text-center mb-4"> User Đăng ký</h2>
+
+    <form #userSignUp="ngForm" (ngSubmit)="signup(userSignUp.value)">
+      <div class="mb-3">
+        <label for="inputName" class="form-label">User name</label>
+        <input type="text" class="form-control" id="inputName" name="name" placeholder="Nhập tên User" ngModel required>
+      </div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Nhập email của bạn" ngModel required>
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">Mật khẩu</label>
+        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Nhập mật khẩu" ngModel required>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!userSignUp.form.valid">Đăng ký</button>
+      <p>Bạn đã có tài khoản ? <button class="btn btn-primary" href="" (click)="openLogin($event)">Click Here</button></p>
+    </form>
+  </div>
+</div>
+
+<div class="row justify-content-center" *ngIf="!showLogin">
+  <div class="col-lg-6">
+    <h2 class="text-center mb-4"> User Đăng nhập</h2>
+    <p class="text-danger">{{ authError }}</p>
+    <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input #email="ngModel" type="email" class="form-control" id="inputEmail" name="email" placeholder="Nhập email của bạn" ngModel required>
+      </div>
+      <p><span *ngIf="email.invalid && email.touched">Mời nhập email</span></p>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">Mật khẩu</label>
+        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Nhập mật khẩu" ngModel required>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!userLogin.form.valid">Đăng nhập</button>
+      <p>Bạn muốn tạo tài khoản mới ? <button class="btn btn-primary" href="" (click)="openSignUp($event)">Click Here</button></p>
+    </form>
+  </div>
+</div>

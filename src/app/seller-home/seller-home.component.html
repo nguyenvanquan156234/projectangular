@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Danh sách sản phẩm</h2>
+  <p class="delete">{{ DeleteMessage }}</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Danh mục</th>
+        <th>Màu sắc</th>
+        <th>Mô tả</th>
+        <th>Hình ảnh</th>
+        <th>Hành Động</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | currency:'USD':'symbol':'1.0-0' }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.color }}</td>
+        <td>{{ product.description }}</td>
+        <td><img src="{{ product.image }}"  alt=""></td>
+        <td class="action-cell">
+          <button class="action-button" (click)="delete(product.id, $event)"><fa-icon [icon]="icon"></fa-icon></button>
+          <button class="action-button" routerLink="/seller-update-product/{{ product.id }}"><fa-icon [icon]="iconEdit"></fa-icon></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

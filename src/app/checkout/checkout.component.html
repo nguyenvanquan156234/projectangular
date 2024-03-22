@@ -1,0 +1,28 @@
+<div class="container">
+  <h2 class="text-center mb-4">Thông tin thanh toán</h2>
+  <form #orderData="ngForm" (ngSubmit)="orderNow(orderData.value)">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input ngModel name="email" type="email" class="form-control" id="inputEmail" placeholder="Nhập email của bạn">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="inputAddress">Địa chỉ</label>
+          <input ngModel type="text" name="diachi" class="form-control" id="inputAddress" placeholder="Nhập địa chỉ của bạn">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContact">Thông tin liên lạc</label>
+      <input ngModel type="text" name="thongtin" class="form-control" id="inputContact" placeholder="Nhập thông tin liên lạc của bạn">
+    </div>
+    <div class="form-group">
+      <label for="total">Tổng tiền:</label>
+      <input type="text" class="form-control text-danger" value=" {{ total | currency:'USD' :'symbol':'1.0-0'}}" id="total"   disabled>
+    </div>
+    <button type="submit" routerLink="/my-order" class="btn btn-primary btn-lg btn-block">Mua ngay</button>
+  </form>
+</div>

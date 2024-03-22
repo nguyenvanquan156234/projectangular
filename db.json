@@ -1,0 +1,164 @@
+{
+  "seller": [
+    {
+      "id": "677d",
+      "name": "nguyen quan",
+      "email": "nquan7271@gmail.com",
+      "password": "quan123"
+    },
+    {
+      "id": "83f7",
+      "name": "tu quan",
+      "email": "nquan72712@gmail.com",
+      "password": "quan123456"
+    },
+    {
+      "id": "5934",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "71e9",
+      "name": "nam",
+      "email": "admin_2@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "bea0",
+      "name": "nam",
+      "email": "admin_2@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "40bc",
+      "name": "tu",
+      "email": "tu122@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "50f5",
+      "email": "nquan7271@gmail.com",
+      "password": "quan123"
+    },
+    {
+      "id": "8ed8",
+      "email": "nquan7271@gmail.com",
+      "password": "quan12345"
+    },
+    {
+      "id": "5533",
+      "name": "nguyen quan",
+      "email": "nquan7271@gmail.com",
+      "password": "quan123"
+    },
+    {
+      "id": "2d15",
+      "name": "nguyen quan",
+      "email": "nquan7271@gmail.com",
+      "password": "quan123"
+    },
+    {
+      "id": "ef9e",
+      "name": "quan",
+      "email": "nquan7271@gmail.com",
+      "password": "quan123"
+    }
+  ],
+  "products": [
+    {
+      "name": "Samsung s22 ultra",
+      "price": "1500",
+      "category": "Samsung",
+      "color": "Black",
+      "description": "hi, đây là sản phẩm của Samsung",
+      "image": "https://dienthoaigiakho.vn/_next/image?url=https%3A%2F%2Fcdn.dienthoaigiakho.vn%2Fphotos%2F1679650778439-S23-Ultra-Bm.jpg&w=1920&q=75",
+      "id": "8e08"
+    },
+    {
+      "name": "Iphone 12",
+      "price": "1300",
+      "category": "Iphone",
+      "color": "Blue",
+      "description": "Đây là sản phẩm của Apple",
+      "image": "https://cdn.trangthienlong.com.vn/wp-content/uploads/2022/10/iphone-12-pro-max-mau-xanh-pacific-blue-128gb-256gb-512gb-trang-thien-long-mobile.jpg",
+      "id": "9af7"
+    },
+    {
+      "name": "Iphone 11",
+      "price": "1100",
+      "category": "Iphone",
+      "color": "Black",
+      "description": "Đây là Applle",
+      "image": "https://clickbuy.com.vn/uploads/images/2019/09/thumb_11-ProMAX_2.jpg",
+      "id": "5d5e"
+    },
+    {
+      "name": "Iphone 16",
+      "price": "1800",
+      "category": "Iphone",
+      "color": "Black",
+      "description": "Đây là sản phẩm của apple",
+      "image": "https://www.techone.vn/wp-content/uploads/2023/09/0020094_iphone-15-pro-max-128gb_550.jpeg",
+      "id": "b2a4"
+    },
+    {
+      "name": "Iphone 15",
+      "price": "1700",
+      "category": "Iphone",
+      "color": "Gray",
+      "description": "Đây là san phẩm của Apple",
+      "image": "https://cdn.trangthienlong.com.vn/wp-content/uploads/2023/09/iphone-15-pro-max-mau-vang-titanium-256gb-512gb-1tb-trang-thien-long-mobile-768x768.jpg",
+      "id": "a72e"
+    }
+  ],
+  "users": [
+    {
+      "id": "b641",
+      "name": "quan",
+      "email": "nquan7271@gmail.com",
+      "password": "quan123"
+    },
+    {
+      "id": "6613",
+      "name": "nam",
+      "email": "nopig23713@viicard.com",
+      "password": "nam123"
+    },
+    {
+      "id": "abff",
+      "name": "quan",
+      "email": "nopig23713@viicard.com",
+      "password": "QUAN123456"
+    }
+  ],
+  "cart": [
+    {
+      "id": "363f",
+      "name": "Iphone 12",
+      "price": "1300",
+      "category": "Iphone",
+      "color": "Blue",
+      "description": "Đây là sản phẩm của Apple",
+      "image": "https://cdn.trangthienlong.com.vn/wp-content/uploads/2022/10/iphone-12-pro-max-mau-xanh-pacific-blue-128gb-256gb-512gb-trang-thien-long-mobile.jpg",
+      "quantity": 3,
+      "productId": "9af7",
+      "userId": "b641"
+    }
+  ],
+  "order": [
+    {
+      "id": "16b0",
+      "email": "nquan7271@gmail.com",
+      "diachi": "hcm",
+      "thongtin": "6245234",
+      "total": 14000,
+      "userId": {
+        "id": "b641",
+        "name": "quan",
+        "email": "nquan7271@gmail.com",
+        "password": "quan123"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+.shop {
+  color: blue; /* Màu văn bản là xanh */
+  font-weight: bold; /* In đậm */
+
+}
+/* Kiểm tra kích thước và padding của nút */
+.nav-link {
+  padding: 8px 16px; /* điều chỉnh padding theo nhu cầu */
+  font-size: 14px; /* điều chỉnh kích thước font chữ theo nhu cầu */
+}
+
+/* Xác định màu và hiệu ứng khi hover */
+.nav-link:hover {
+  color: #007bff; /* màu chữ khi hover */
+  text-decoration: none; /* loại bỏ gạch chân khi hover */
+}
+
+/* Xác định màu và hiệu ứng khi active (khi nút được nhấp vào) */
+.nav-link:active {
+  color: #0056b3; /* màu chữ khi active */
+}
+.logo {
+  width: 30px; /* Kích thước chiều rộng */
+  height: auto; /* Độ cao tự động tính toán theo tỷ lệ */
+}
+
+/* detail.component.css */
+
+/* Thêm hiệu ứng cho danh sách kết quả tìm kiếm */
+ul.search-results {
+  list-style-type: none; /* Ẩn dấu đầu dòng của mỗi item trong danh sách */
+  padding: 0; /* Loại bỏ padding mặc định của danh sách */
+  margin: 0; /* Loại bỏ margin mặc định của danh sách */
+  background-color: #fff; /* Màu nền cho danh sách */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+  border-radius: 4px; /* Bo tròn viền của danh sách */
+  max-height: 200px; /* Giới hạn chiều cao của danh sách */
+  overflow-y: auto; /* Tạo thanh cuộn cho trường hợp danh sách dài hơn */
+}
+
+/* Tùy chỉnh kiểu dáng mỗi mục trong danh sách */
+ul.search-results li {
+  padding: 8px 16px; /* Điều chỉnh padding cho mỗi mục */
+  cursor: pointer; /* Biến con trỏ thành hình bàn tay khi di chuột qua mỗi mục */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+/* Hiệu ứng màu nền khi di chuột qua mỗi mục */
+ul.search-results li:hover {
+  background-color: #f5f5f5; /* Màu nền khi hover */
+}

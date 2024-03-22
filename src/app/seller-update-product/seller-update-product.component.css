@@ -1,0 +1,8 @@
+.container {
+  max-width: 600px; /* Thiết lập chiều rộng tối đa cho container */
+  margin: auto; /* Để căn giữa container trên trang */
+  padding: 20px; /* Thêm padding để tạo khoảng cách xung quanh nội dung */
+}
+.p{
+  color: green;
+}

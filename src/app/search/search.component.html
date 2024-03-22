@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Danh sách sản phẩm</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let item of searchResult">
+      <div class="card">
+       <a routerLink="/detail/{{ item.id }}"><img src="{{ item.image }}" class="card-img-top" alt="Product Image">
+       </a>
+        <div class="card-body">
+          <h5 class="card-title" routerLink="/detail/{{ item.id }}"></h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text text-danger">Giá: {{ item.price | currency:'USD':'symbol':'1.0-0' }}</p>
+          <a routerLink="detail/{{ item.id }}" class="btn btn-primary">Xem chi tiết</a>
+          <a href="#" class="btn btn-success ms-2">Thêm giỏ hàng</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

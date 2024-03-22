@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Thêm Sản phẩm mới</h2>
+  <p class="f">{{ addProductMessage}}</p>
+  <form #addProductForm="ngForm" (ngSubmit)="submit(addProductForm.value)">
+    <div class="row">
+      <div class="col mb-3">
+        <label for="name" class="form-label">Tên Sản Phẩm:</label>
+        <input type="text" class="form-control" id="name" name="name" ngModel placeholder="Nhập tên sản phẩm">
+      </div>
+      <div class="col mb-3">
+        <label for="price" class="form-label">Giá:</label>
+        <input type="text" class="form-control" id="price" name="price" ngModel placeholder="Nhập giá sản phẩm">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="category" class="form-label">Danh mục:</label>
+        <input type="text" class="form-control" id="category" name="category" ngModel placeholder="Nhập danh mục sản phẩm">
+      </div>
+      <div class="col mb-3">
+        <label for="color" class="form-label">Màu sắc:</label>
+        <input type="text" class="form-control" id="color" name="color" ngModel placeholder="Nhập màu sắc sản phẩm">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Mô tả:</label>
+      <textarea class="form-control" id="description" name="description" rows="5" ngModel placeholder="Nhập mô tả sản phẩm"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Đường dẫn hình ảnh:</label>
+      <input type="text" class="form-control" id="image" name="image" ngModel placeholder="Nhập đường dẫn hình ảnh URL">
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm</button>
+  </form>
+</div>
